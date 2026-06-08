@@ -1,5 +1,5 @@
 export const heroDetails = {
     heading: 'Smart, Secure, Simple Financial Management',
-    subheading: 'From effortless budgeting to real-time investment insights, Rexipay puts you in control of your money like never before',
+    subheading: 'RexiPay enables secure online and offline transactions, empowering users and businesses to send, receive, and access money anytime, anywhere',
     centerImageSrc: '/images/herophone.webp',
 }
