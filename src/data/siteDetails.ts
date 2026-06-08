@@ -2,8 +2,8 @@ export const siteDetails = {
     siteName: 'Rexipay',
     siteUrl: 'https://finwise-omega.vercel.app/',
     metadata: {
-        title: 'Rexipay - Next.js and Tailwind CSS Landing Page Template',
-        description: 'Rexipay empowers businesses with cutting-edge technology solutions to drive success and efficiency.',
+        title: 'Rexipay - Simplified Payment That Works',
+        description: 'Simplified payment that works.',
     },
     language: 'en-us',
     locale: 'en-US',

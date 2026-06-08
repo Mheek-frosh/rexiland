@@ -1,5 +1,5 @@
 export const heroDetails = {
-    heading: 'Smart, Secure, Simple Financial Management',
-    subheading: 'RexiPay enables secure online and offline transactions, empowering users and businesses to send, receive, and access money anytime, anywhere',
+    heading: 'Simplified Payment That Works',
+    subheading: 'Secure, seamless transactions for everyone, everywhere',
     centerImageSrc: '/images/herophone.webp',
 }

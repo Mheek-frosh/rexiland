@@ -1,4 +1,4 @@
-import { FiBarChart2, FiBriefcase, FiDollarSign, FiLock, FiPieChart, FiShield, FiTarget, FiTrendingUp, FiUser } from "react-icons/fi";
+import { FiBarChart2, FiBriefcase, FiDollarSign, FiLock, FiPieChart, FiShield, FiTarget, FiTrendingUp } from "react-icons/fi";
 
 import { IBenefit } from "@/types"
 
@@ -45,28 +45,28 @@ export const benefits: IBenefit[] = [
                 icon: <FiPieChart size={26} />
             }
         ],
-        imageSrc: "/images/mockup-2.webp"
+        imageSrc: "/images/convert.webp"
     },
     {
         title: "Bank-Grade Security",
-        description: "Your financial data deserves the best protection. Rest easy knowing Rexipay employs cutting-edge security measures.",
+        description: "Your financial data deserves the best protection. Rest easy knowing Rexipay employs cutting-edge security measures for both traditional and crypto transactions.",
         bullets: [
             {
                 title: "Military-Grade Encryption",
-                description: "Your information is safeguarded with the highest level of encryption.",
+                description: "Your information is safeguarded with the highest level of encryption protocols.",
                 icon: <FiLock size={26} />
             },
             {
-                title: "Biometric Authentication",
-                description: "Access your account securely with fingerprint or facial recognition.",
-                icon: <FiUser size={26} />
+                title: "Crypto Asset Protection",
+                description: "Advanced blockchain security and multi-signature wallets protect your digital assets.",
+                icon: <FiShield size={26} />
             },
             {
-                title: "Real-Time Fraud Detection",
-                description: "Our system constantly monitors for suspicious activity to keep your money safe.",
-                icon: <FiShield size={26} />
+                title: "Anti-Theft Monitoring",
+                description: "Real-time fraud detection and instant transaction alerts keep your funds safe.",
+                icon: <FiPieChart size={26} />
             }
         ],
-        imageSrc: "/images/mock1.webp"
+        imageSrc: "/images/secure.webp"
     },
 ]
