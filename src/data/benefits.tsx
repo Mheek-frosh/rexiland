@@ -4,22 +4,22 @@ import { IBenefit } from "@/types"
 
 export const benefits: IBenefit[] = [
     {
-        title: "Smart Budgeting",
-        description: "Take the guesswork out of managing your money. Our AI-powered budgeting tool adapts to your lifestyle and helps you stay on track.",
+        title: "Financial Infrastructure Without Limits",
+        description: "RexiPay powers seamless online and offline transactions, ensuring payments continue even when traditional banking infrastructure fails.",
         bullets: [
             {
-                title: "Intelligent Categorization",
-                description: "Automatically sorts your transactions for crystal-clear insights.",
+                title: "POS-Free & ATM-Free Transactions",
+                description: "Access, transfer, and receive funds without expensive POS hardware or dependence on ATM networks.",
                 icon: <FiBarChart2 size={26} />
             },
             {
-                title: "Customizable Goals",
-                description: "Set and track financial objectives that matter to you.",
+                title: "Instant Crypto Liquidity",
+                description: "Receive cryptocurrency, sell digital assets instantly, and convert crypto to cash with rapid settlement.",
                 icon: <FiTarget size={26} />
             },
             {
-                title: "Predictive Analysis",
-                description: "Get ahead of your finances with spending forecasts and alerts.",
+                title: "Secure Digital Finance Ecosystem",
+                description: "A unified platform for payments, merchant services, transfers, and digital asset management, built with security and accessibility at its core.",
                 icon: <FiTrendingUp size={26} />
             }
         ],
