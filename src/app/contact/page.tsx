@@ -7,8 +7,7 @@ import {
     HiOutlineQuestionMarkCircle,
     HiOutlineArrowRight,
     HiOutlineArrowUpRight,
-    HiOutlineChatBubbleLeftRight,
-    HiOutlineShieldExclamation
+    HiOutlineChatBubbleLeftRight
 } from 'react-icons/hi2';
 import Container from '@/components/Container';
 
@@ -50,7 +49,7 @@ const ContactPage: React.FC = () => {
                         transition={{ duration: 0.5, delay: 0.1 }}
                         className="mt-6 text-4xl md:text-6xl font-bold tracking-tight text-zinc-900 max-w-3xl mx-auto leading-tight"
                     >
-                        We're always available to answer your questions
+                        We&apos;re always available to answer your questions
                     </motion.h1>
 
                     {/* Cards Container */}
@@ -137,7 +136,7 @@ const ContactPage: React.FC = () => {
                             <div>
                                 <h3 className="text-xl font-bold text-zinc-900 mb-4">Trouble signing in?</h3>
                                 <p className="text-zinc-500 mb-6 leading-relaxed text-sm md:text-base">
-                                    If you've got trouble signing in, you might need to reset your password or recover your username. Click learn more for a step-by-step guide on how to manage your account.
+                                    If you&apos;ve got trouble signing in, you might need to reset your password or recover your username. Click learn more for a step-by-step guide on how to manage your account.
                                 </p>
                                 
                                 {/* Tags */}
