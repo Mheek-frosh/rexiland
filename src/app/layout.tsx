@@ -4,6 +4,7 @@ import { Source_Sans_3, Manrope } from "next/font/google";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 import { siteDetails } from '@/data/siteDetails';
 
 import "./globals.css";
@@ -52,6 +53,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <ChatWidget />
       </body>
     </html>
   );

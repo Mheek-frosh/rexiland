@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
@@ -72,7 +71,6 @@ const IconResolver = ({ name, className }: { name: string; className?: string })
 };
 
 const Header: React.FC = () => {
-    const router = useRouter();
     const [scrolled, setScrolled] = useState(false);
     const [activeSegment, setActiveSegment] = useState<'business' | 'personal'>('business');
     const [activeProductCategory, setActiveProductCategory] = useState<string>('banking');
@@ -114,11 +112,6 @@ const Header: React.FC = () => {
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
-    };
-
-    const handleMobileNavClick = (href: string) => {
-        setIsOpen(false);
-        router.push(href);
     };
 
     return (
@@ -314,7 +307,7 @@ const Header: React.FC = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="#blog" className="text-foreground hover:text-secondary transition-colors">
+                            <Link href="/blog" className="text-foreground hover:text-secondary transition-colors">
                                 Blog
                             </Link>
                         </li>
@@ -390,11 +383,11 @@ const Header: React.FC = () => {
                                 const nextIndex = (currentIndex + 1) % countries.length;
                                 setActiveCountry(countries[nextIndex]);
                             }}
-                            className="flex items-center justify-center p-2 rounded-full border border-zinc-200 bg-white w-9 h-9 shadow-sm overflow-hidden"
+                            className="flex items-center justify-center p-1.5 rounded-full border border-zinc-200 bg-white w-9 h-9 shadow-sm overflow-hidden"
                             title="Toggle Country"
                         >
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={activeCountry.flagUrl} alt={activeCountry.name} width={28} height={28} className="w-full h-full object-cover" />
+                            <img src={activeCountry.flagUrl} alt={activeCountry.name} width={20} height={15} className="w-full h-auto object-cover" style={{ aspectRatio: '4/3' }} />
                         </button>
 
                         <button
@@ -547,15 +540,12 @@ const Header: React.FC = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <button
-                                        onClick={() => handleMobileNavClick('/contact')}
-                                        className="block w-full text-left py-1.5 text-zinc-800 hover:text-secondary font-medium"
-                                    >
+                                    <Link href="/contact" className="block py-1.5 text-zinc-800 hover:text-secondary" onClick={toggleMenu}>
                                         Contact
-                                    </button>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <Link href="#blog" className="block py-1.5 text-zinc-800 hover:text-secondary" onClick={toggleMenu}>
+                                    <Link href="/blog" className="block py-1.5 text-zinc-800 hover:text-secondary" onClick={toggleMenu}>
                                         Blog
                                     </Link>
                                 </li>

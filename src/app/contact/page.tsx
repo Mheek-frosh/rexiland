@@ -9,7 +9,6 @@ import {
     HiOutlineArrowUpRight
 } from 'react-icons/hi2';
 import Container from '@/components/Container';
-import ChatWidget from '@/components/ChatWidget';
 
 const ContactPage: React.FC = () => {
     return (
@@ -272,15 +271,12 @@ const ContactPage: React.FC = () => {
                                 <HiOutlineArrowRight className="w-4 h-4 stroke-[2.5]" />
                             </motion.a>
                         </div>
-                    </motion.div>
-                </Container>
-            </section>
+</motion.div>
+                 </Container>
+             </section>
 
-            {/* FLOATING SUPPORT CHAT WIDGET */}
-            <ChatWidget />
-
-        </div>
-    );
+         </div>
+     );
 };
 
 export default ContactPage;

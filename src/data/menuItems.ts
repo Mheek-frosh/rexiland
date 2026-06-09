@@ -203,7 +203,7 @@ export const companyItems: ICompanyItem[] = [
         title: "Careers",
         description: "Join our team and build the future of fintech infrastructure",
         icon: "HiOutlineAcademicCap",
-        url: "#careers",
+        url: "/careers",
         badge: "We're Hiring!"
     },
     {
