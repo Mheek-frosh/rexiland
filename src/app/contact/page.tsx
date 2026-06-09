@@ -6,10 +6,10 @@ import {
     HiOutlinePhone,
     HiOutlineQuestionMarkCircle,
     HiOutlineArrowRight,
-    HiOutlineArrowUpRight,
-    HiOutlineChatBubbleLeftRight
+    HiOutlineArrowUpRight
 } from 'react-icons/hi2';
 import Container from '@/components/Container';
+import ChatWidget from '@/components/ChatWidget';
 
 const ContactPage: React.FC = () => {
     return (
@@ -33,6 +33,7 @@ const ContactPage: React.FC = () => {
                 <Container className="text-center">
                     
                     {/* Badge */}
+                
                     <motion.div
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -275,18 +276,8 @@ const ContactPage: React.FC = () => {
                 </Container>
             </section>
 
-            {/* FLOATING ACTION CHAT BUBBLE */}
-            <motion.div
-                initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.8, type: 'spring', stiffness: 260, damping: 20 }}
-                whileHover={{ scale: 1.08 }}
-                whileTap={{ scale: 0.92 }}
-                className="fixed bottom-6 right-6 z-40 bg-secondary hover:bg-secondary/95 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center cursor-pointer transition-shadow hover:shadow-secondary/30"
-                onClick={() => alert('Support chatbot opening soon!')}
-            >
-                <HiOutlineChatBubbleLeftRight className="w-7 h-7" />
-            </motion.div>
+            {/* FLOATING SUPPORT CHAT WIDGET */}
+            <ChatWidget />
 
         </div>
     );

@@ -200,12 +200,6 @@ export interface ICompanyItem {
 
 export const companyItems: ICompanyItem[] = [
     {
-        title: "About Us",
-        description: "Our mission, vision, and team story of simplified payments",
-        icon: "HiOutlineInformationCircle",
-        url: "#about"
-    },
-    {
         title: "Careers",
         description: "Join our team and build the future of fintech infrastructure",
         icon: "HiOutlineAcademicCap",
