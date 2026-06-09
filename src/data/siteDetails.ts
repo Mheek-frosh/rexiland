@@ -1,6 +1,6 @@
 export const siteDetails = {
     siteName: 'Rexipay',
-    siteUrl: 'https://finwise-omega.vercel.app/',
+    siteUrl: 'https://rexipaylandingpage.netlify.app./',
     metadata: {
         title: 'Rexipay - Simplified Payment That Works',
         description: 'Simplified payment that works.',

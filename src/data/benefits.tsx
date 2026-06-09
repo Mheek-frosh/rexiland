@@ -5,43 +5,43 @@ import { IBenefit } from "@/types"
 export const benefits: IBenefit[] = [
     {
         title: "Financial Infrastructure Without Limits",
-        description: "RexiPay powers seamless online and offline transactions, ensuring payments continue even when traditional banking infrastructure fails.",
+        description: "Secure payments anytime, anywhere.",
         bullets: [
             {
                 title: "POS-Free & ATM-Free Transactions",
-                description: "Access, transfer, and receive funds without expensive POS hardware or dependence on ATM networks.",
+                description: "No POS hardware or ATM needed.",
                 icon: <FiBarChart2 size={26} />
             },
             {
                 title: "Instant Crypto Liquidity",
-                description: "Receive cryptocurrency, sell digital assets instantly, and convert crypto to cash with rapid settlement.",
+                description: "Convert crypto to cash instantly.",
                 icon: <FiTarget size={26} />
             },
             {
                 title: "Secure Digital Finance Ecosystem",
-                description: "A unified platform for payments, merchant services, transfers, and digital asset management, built with security and accessibility at its core.",
+                description: "Payments, transfers, and asset management.",
                 icon: <FiTrendingUp size={26} />
             }
         ],
-        imageSrc: "/images/mock1.webp"
+        imageSrc: "/images/m1.webp"
     },
     {
         title: "Seamless Investing",
-        description: "Start building wealth today, no financial degree required. Rexipay makes investing accessible and straightforward.",
+        description: "Build wealth with ease.",
         bullets: [
             {
                 title: "Micro-Investing",
-                description: "Begin with as little as $1 and watch your money grow.",
+                description: "Start with just $1.",
                 icon: <FiDollarSign size={26} />
             },
             {
                 title: "Expert Portfolios",
-                description: "Choose from investment strategies tailored to your risk tolerance.",
+                description: "Strategies for any risk level.",
                 icon: <FiBriefcase size={26} />
             },
             {
                 title: "Real-Time Performance",
-                description: "Track your investments with easy-to-understand metrics and visuals.",
+                description: "Track investments easily.",
                 icon: <FiPieChart size={26} />
             }
         ],
@@ -49,21 +49,21 @@ export const benefits: IBenefit[] = [
     },
     {
         title: "Bank-Grade Security",
-        description: "Your financial data deserves the best protection. Rest easy knowing Rexipay employs cutting-edge security measures for both traditional and crypto transactions.",
+        description: "Your funds protected at all levels.",
         bullets: [
             {
                 title: "Military-Grade Encryption",
-                description: "Your information is safeguarded with the highest level of encryption protocols.",
+                description: "Top-level data encryption.",
                 icon: <FiLock size={26} />
             },
             {
                 title: "Crypto Asset Protection",
-                description: "Advanced blockchain security and multi-signature wallets protect your digital assets.",
+                description: "Blockchain security for crypto.",
                 icon: <FiShield size={26} />
             },
             {
                 title: "Anti-Theft Monitoring",
-                description: "Real-time fraud detection and instant transaction alerts keep your funds safe.",
+                description: "Real-time fraud alerts.",
                 icon: <FiPieChart size={26} />
             }
         ],
