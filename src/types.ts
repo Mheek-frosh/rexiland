@@ -1,6 +1,19 @@
 export interface IMenuItem {
     text: string;
-    url: string;
+    url?: string;
+    hasDropdown?: boolean;
+    dropdownItems?: IDropdownItem[];
+}
+
+export interface IDropdownItem {
+    heading?: string;
+    items: { text: string; url: string }[];
+}
+
+export interface ICountry {
+    name: string;
+    code: string;
+    flag: string;
 }
 
 export interface IBenefit {

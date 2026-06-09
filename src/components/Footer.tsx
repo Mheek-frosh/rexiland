@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
                     <ul className="text-foreground-accent">
                         {footerDetails.quickLinks.map(link => (
                             <li key={link.text} className="mb-2">
-                                <Link href={link.url} className="hover:text-foreground">{link.text}</Link>
+                                <Link href={link.url || '#'} className="hover:text-foreground">{link.text}</Link>
                             </li>
                         ))}
                     </ul>
@@ -40,10 +40,11 @@ const Footer: React.FC = () => {
                     {footerDetails.socials && (
                         <div className="mt-5 flex items-center gap-5 flex-wrap">
                             {Object.keys(footerDetails.socials).map(platformName => {
-                                if (platformName && footerDetails.socials[platformName]) {
+                                const socialUrl = footerDetails.socials[platformName];
+                                if (platformName && socialUrl) {
                                     return (
                                         <Link
-                                            href={footerDetails.socials[platformName]}
+                                            href={socialUrl}
                                             key={platformName}
                                             aria-label={platformName}
                                         >
