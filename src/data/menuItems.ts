@@ -222,7 +222,7 @@ export const companyItems: ICompanyItem[] = [
         title: "Contact Us",
         description: "Get in touch with our friendly 24/7 customer support team",
         icon: "HiOutlineEnvelope",
-        url: "#contact"
+        url: "/contact"
     }
 ];
 

@@ -302,7 +302,7 @@ const Header: React.FC = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="#contact" className="text-foreground hover:text-secondary transition-colors">
+                            <Link href="/contact" className="text-foreground hover:text-secondary transition-colors">
                                 Contact
                             </Link>
                         </li>
@@ -537,7 +537,7 @@ const Header: React.FC = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#contact" className="block py-1.5 text-zinc-800 hover:text-secondary" onClick={toggleMenu}>
+                                    <Link href="/contact" className="block py-1.5 text-zinc-800 hover:text-secondary" onClick={toggleMenu}>
                                         Contact
                                     </Link>
                                 </li>
