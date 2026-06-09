@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
@@ -71,6 +72,7 @@ const IconResolver = ({ name, className }: { name: string; className?: string })
 };
 
 const Header: React.FC = () => {
+    const router = useRouter();
     const [scrolled, setScrolled] = useState(false);
     const [activeSegment, setActiveSegment] = useState<'business' | 'personal'>('business');
     const [activeProductCategory, setActiveProductCategory] = useState<string>('banking');
@@ -112,6 +114,11 @@ const Header: React.FC = () => {
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+    };
+
+    const handleMobileNavClick = (href: string) => {
+        setIsOpen(false);
+        router.push(href);
     };
 
     return (
@@ -331,7 +338,8 @@ const Header: React.FC = () => {
                                 onClick={() => setCountryOpen(!countryOpen)}
                                 className="flex items-center gap-1.5 p-2 rounded-full border border-zinc-200/60 bg-zinc-50 hover:bg-zinc-100 text-foreground transition-all focus:outline-none"
                             >
-                                <span className="text-lg leading-none select-none">{activeCountry.flag}</span>
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img src={activeCountry.flagUrl} alt={activeCountry.name} width={20} height={15} className="w-5 h-auto rounded-sm object-cover select-none" />
                                 <HiChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${countryOpen ? 'rotate-180' : ''} text-zinc-500`} />
                             </button>
 
@@ -361,7 +369,8 @@ const Header: React.FC = () => {
                                                             : 'text-zinc-700 hover:bg-zinc-50'
                                                     }`}
                                                 >
-                                                    <span className="text-lg leading-none">{country.flag}</span>
+                                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                    <img src={country.flagUrl} alt={country.name} width={20} height={15} className="w-5 h-auto rounded-sm object-cover" />
                                                     <span>{country.name}</span>
                                                 </button>
                                             ))}
@@ -381,10 +390,11 @@ const Header: React.FC = () => {
                                 const nextIndex = (currentIndex + 1) % countries.length;
                                 setActiveCountry(countries[nextIndex]);
                             }}
-                            className="flex items-center justify-center p-2 rounded-full border border-zinc-200 bg-white text-lg w-9 h-9 shadow-sm"
+                            className="flex items-center justify-center p-2 rounded-full border border-zinc-200 bg-white w-9 h-9 shadow-sm overflow-hidden"
                             title="Toggle Country"
                         >
-                            {activeCountry.flag}
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={activeCountry.flagUrl} alt={activeCountry.name} width={28} height={28} className="w-full h-full object-cover" />
                         </button>
 
                         <button
@@ -537,9 +547,12 @@ const Header: React.FC = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/contact" className="block py-1.5 text-zinc-800 hover:text-secondary" onClick={toggleMenu}>
+                                    <button
+                                        onClick={() => handleMobileNavClick('/contact')}
+                                        className="block w-full text-left py-1.5 text-zinc-800 hover:text-secondary font-medium"
+                                    >
                                         Contact
-                                    </Link>
+                                    </button>
                                 </li>
                                 <li>
                                     <Link href="#blog" className="block py-1.5 text-zinc-800 hover:text-secondary" onClick={toggleMenu}>

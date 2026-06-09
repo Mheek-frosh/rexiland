@@ -227,8 +227,8 @@ export const companyItems: ICompanyItem[] = [
 ];
 
 export const countries = [
-    { name: "Nigeria", code: "NG", flag: "🇳🇬" },
-    { name: "Ghana", code: "GH", flag: "🇬🇭" },
-    { name: "Kenya", code: "KE", flag: "🇰🇪" },
-    { name: "South Africa", code: "ZA", flag: "🇿🇦" }
+    { name: "Nigeria", code: "NG", flag: "🇳🇬", flagUrl: "https://flagcdn.com/w40/ng.png" },
+    { name: "Ghana", code: "GH", flag: "🇬🇭", flagUrl: "https://flagcdn.com/w40/gh.png" },
+    { name: "Kenya", code: "KE", flag: "🇰🇪", flagUrl: "https://flagcdn.com/w40/ke.png" },
+    { name: "South Africa", code: "ZA", flag: "🇿🇦", flagUrl: "https://flagcdn.com/w40/za.png" }
 ];
