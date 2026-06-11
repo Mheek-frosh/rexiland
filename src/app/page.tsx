@@ -1,6 +1,6 @@
 import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
-import Pricing from "@/components/Pricing/Pricing";
+import OfflinePayments from "@/components/OfflinePayments/OfflinePayments";
 import FAQ from "@/components/FAQ";
 import Logos from "@/components/Logos";
 import Benefits from "@/components/Benefits/Benefits";
@@ -17,13 +17,7 @@ const HomePage: React.FC = () => {
       <Container>
         <Benefits />
 
-        <Section
-          id="pricing"
-          title="Pricing"
-          description="Simple, transparent pricing. No surprises."
-        >
-          <Pricing />
-        </Section>
+        <OfflinePayments />
 
         <Section
           id="testimonials"

@@ -14,8 +14,8 @@ export const footerDetails: {
             url: "#features"
         },
         {
-            text: "Pricing",
-            url: "#pricing"
+            text: "Offline Payments",
+            url: "#offline-payments"
         },
         {
             text: "Testimonials",
