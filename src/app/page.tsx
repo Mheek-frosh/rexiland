@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
 import OfflinePayments from "@/components/OfflinePayments/OfflinePayments";
+import CryptoLiquidity from "@/components/CryptoLiquidity/CryptoLiquidity";
 import FAQ from "@/components/FAQ";
 import Logos from "@/components/Logos";
 import Benefits from "@/components/Benefits/Benefits";
@@ -18,6 +19,7 @@ const HomePage: React.FC = () => {
         <Benefits />
 
         <OfflinePayments />
+        <CryptoLiquidity />
 
         <Section
           id="testimonials"
