@@ -318,7 +318,7 @@ const Header: React.FC = () => {
                         
                         {/* Sign In button */}
                         <Link 
-                            href="#cta" 
+                            href="/sign-in" 
                             className="group flex items-center gap-2 text-black bg-primary hover:bg-primary-accent px-6 py-2.5 rounded-full font-semibold transition-all shadow-sm hover:shadow-md"
                         >
                             <span>Sign in</span>
@@ -554,7 +554,7 @@ const Header: React.FC = () => {
                             {/* Mobile CTA */}
                             <div className="pt-2">
                                 <Link 
-                                    href="#cta" 
+                                    href="/sign-in" 
                                     className="flex items-center justify-center gap-2 text-black bg-primary hover:bg-primary-accent px-6 py-3 rounded-full font-semibold transition-colors shadow-sm w-full" 
                                     onClick={toggleMenu}
                                 >
