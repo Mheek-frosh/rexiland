@@ -136,18 +136,8 @@ const Header: React.FC = () => {
                             </span>
                         </Link>
 
-                        {/* Segment Toggle (Business / Personal) */}
+                        {/* Segment Toggle (Personal / Business) */}
                         <div className="hidden lg:flex bg-zinc-100 p-1 rounded-full text-xs font-semibold border border-zinc-200/40">
-                            <button
-                                onClick={() => setActiveSegment('business')}
-                                className={`px-4 py-1.5 rounded-full transition-all duration-200 ${
-                                    activeSegment === 'business'
-                                        ? 'bg-secondary text-white shadow-sm font-semibold'
-                                        : 'text-zinc-600 hover:text-zinc-900'
-                                }`}
-                            >
-                                Business
-                            </button>
                             <button
                                 onClick={() => setActiveSegment('personal')}
                                 className={`px-4 py-1.5 rounded-full transition-all duration-200 ${
@@ -157,6 +147,16 @@ const Header: React.FC = () => {
                                 }`}
                             >
                                 Personal
+                            </button>
+                            <button
+                                onClick={() => setActiveSegment('business')}
+                                className={`px-4 py-1.5 rounded-full transition-all duration-200 ${
+                                    activeSegment === 'business'
+                                        ? 'bg-secondary text-white shadow-sm font-semibold'
+                                        : 'text-zinc-600 hover:text-zinc-900'
+                                }`}
+                            >
+                                Business
                             </button>
                         </div>
                     </div>
@@ -424,18 +424,8 @@ const Header: React.FC = () => {
                     >
                         <div className="flex flex-col space-y-4 pt-4 pb-8 px-6">
                             
-                            {/* Mobile Business/Personal Toggle */}
+                            {/* Mobile Personal/Business Toggle */}
                             <div className="flex bg-zinc-100 p-1 rounded-full text-xs font-semibold border border-zinc-200/40 w-fit">
-                                <button
-                                    onClick={() => setActiveSegment('business')}
-                                    className={`px-4 py-1.5 rounded-full transition-all duration-200 ${
-                                        activeSegment === 'business'
-                                            ? 'bg-secondary text-white shadow-sm'
-                                            : 'text-zinc-600'
-                                    }`}
-                                >
-                                    Business
-                                </button>
                                 <button
                                     onClick={() => setActiveSegment('personal')}
                                     className={`px-4 py-1.5 rounded-full transition-all duration-200 ${
@@ -445,6 +435,16 @@ const Header: React.FC = () => {
                                     }`}
                                 >
                                     Personal
+                                </button>
+                                <button
+                                    onClick={() => setActiveSegment('business')}
+                                    className={`px-4 py-1.5 rounded-full transition-all duration-200 ${
+                                        activeSegment === 'business'
+                                            ? 'bg-secondary text-white shadow-sm'
+                                            : 'text-zinc-600'
+                                    }`}
+                                >
+                                    Business
                                 </button>
                             </div>
 
