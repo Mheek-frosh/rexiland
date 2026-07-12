@@ -29,7 +29,9 @@ import {
     HiChevronDown,
     HiBars3,
     HiOutlineXMark,
-    HiOutlineArrowRight
+    HiOutlineArrowRight,
+    HiOutlineRocketLaunch,
+    HiOutlineSparkles
 } from 'react-icons/hi2';
 import Image from 'next/image';
 import Container from './Container';
@@ -74,8 +76,8 @@ const IconResolver = ({ name, className }: { name: string; className?: string })
 const Header: React.FC = () => {
     const { openWaitlist } = useWaitlist();
     const [scrolled, setScrolled] = useState(false);
-    const [activeSegment, setActiveSegment] = useState<'business' | 'personal'>('business');
-    const [activeProductCategory, setActiveProductCategory] = useState<string>('banking');
+    const [activeSegment, setActiveSegment] = useState<'business' | 'personal'>('personal');
+    const [activeProductCategory, setActiveProductCategory] = useState<string>(personalProducts[0]?.key ?? 'banking');
     const [activeCountry, setActiveCountry] = useState(countries[0]);
     
     // Desktop hover state tracking
@@ -87,6 +89,7 @@ const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
     const [mobileCompanyOpen, setMobileCompanyOpen] = useState(false);
+    const [businessComingSoon, setBusinessComingSoon] = useState(false);
 
     // Dynamic background scroll handler
     useEffect(() => {
@@ -114,6 +117,11 @@ const Header: React.FC = () => {
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+    };
+
+    const openBusinessComingSoon = () => {
+        setBusinessComingSoon(true);
+        setIsOpen(false);
     };
 
     return (
@@ -149,7 +157,7 @@ const Header: React.FC = () => {
                                 Personal
                             </button>
                             <button
-                                onClick={() => setActiveSegment('business')}
+                                onClick={openBusinessComingSoon}
                                 className={`px-4 py-1.5 rounded-full transition-all duration-200 ${
                                     activeSegment === 'business'
                                         ? 'bg-secondary text-white shadow-sm font-semibold'
@@ -437,7 +445,7 @@ const Header: React.FC = () => {
                                     Personal
                                 </button>
                                 <button
-                                    onClick={() => setActiveSegment('business')}
+                                    onClick={openBusinessComingSoon}
                                     className={`px-4 py-1.5 rounded-full transition-all duration-200 ${
                                         activeSegment === 'business'
                                             ? 'bg-secondary text-white shadow-sm'
@@ -569,6 +577,33 @@ const Header: React.FC = () => {
                                 </button>
                             </div>
                         </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+            <AnimatePresence>
+                {businessComingSoon && (
+                    <motion.div
+                        className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6"
+                        initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+                        role="dialog" aria-modal="true" aria-labelledby="business-coming-soon-title"
+                    >
+                        <button type="button" onClick={() => setBusinessComingSoon(false)} aria-label="Close coming soon message" className="absolute inset-0 cursor-default bg-zinc-950/70 backdrop-blur-sm" />
+                        <motion.div
+                            initial={{ opacity: 0, y: 28, scale: 0.94 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 16, scale: 0.96 }}
+                            transition={{ type: 'spring', stiffness: 300, damping: 26 }}
+                            className="relative w-full max-w-lg overflow-hidden rounded-[2rem] bg-[#080d22] px-6 py-10 text-center text-white shadow-2xl sm:px-12 sm:py-12"
+                        >
+                            <motion.div className="absolute -left-16 -top-20 h-52 w-52 rounded-full bg-secondary/60 blur-3xl" animate={{ x: [0, 24, 0], y: [0, 14, 0] }} transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }} />
+                            <motion.div className="absolute -bottom-24 -right-16 h-56 w-56 rounded-full bg-primary/35 blur-3xl" animate={{ x: [0, -20, 0], y: [0, -16, 0] }} transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }} />
+                            <motion.div initial={{ rotate: -15, scale: 0.7 }} animate={{ rotate: 0, scale: 1 }} transition={{ type: 'spring', delay: 0.12, stiffness: 220, damping: 15 }} className="relative mx-auto flex h-20 w-20 items-center justify-center rounded-[1.5rem] border border-white/15 bg-white/10 text-primary shadow-xl backdrop-blur">
+                                <HiOutlineRocketLaunch className="h-10 w-10" />
+                                <motion.div className="absolute -right-3 -top-3 text-primary" animate={{ scale: [0.85, 1.2, 0.85], rotate: [0, 12, 0] }} transition={{ duration: 2, repeat: Infinity }}><HiOutlineSparkles className="h-6 w-6" /></motion.div>
+                            </motion.div>
+                            <p className="relative mt-7 text-xs font-bold uppercase tracking-[0.24em] text-primary">On the way</p>
+                            <h2 id="business-coming-soon-title" className="relative mt-3 manrope text-3xl font-bold tracking-tight sm:text-4xl">Business is coming soon</h2>
+                            <p className="relative mx-auto mt-4 max-w-sm text-base leading-7 text-zinc-300">We&apos;re creating a powerful business experience for payments, operations, and growth. It&apos;ll be worth the wait.</p>
+                            <button type="button" onClick={() => setBusinessComingSoon(false)} className="relative mt-8 w-full rounded-full bg-primary px-6 py-3.5 font-bold text-zinc-950 transition hover:bg-primary-accent sm:w-auto sm:min-w-44">Got it</button>
+                        </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>
