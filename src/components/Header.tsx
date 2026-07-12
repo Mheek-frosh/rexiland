@@ -34,6 +34,7 @@ import {
 import Image from 'next/image';
 import Container from './Container';
 import { siteDetails } from '@/data/siteDetails';
+import { useWaitlist } from './WaitlistProvider';
 import {
     businessProducts,
     personalProducts,
@@ -71,6 +72,7 @@ const IconResolver = ({ name, className }: { name: string; className?: string })
 };
 
 const Header: React.FC = () => {
+    const { openWaitlist } = useWaitlist();
     const [scrolled, setScrolled] = useState(false);
     const [activeSegment, setActiveSegment] = useState<'business' | 'personal'>('business');
     const [activeProductCategory, setActiveProductCategory] = useState<string>('banking');
@@ -317,13 +319,14 @@ const Header: React.FC = () => {
                     <div className="hidden md:flex items-center space-x-4">
                         
                         {/* Sign In button */}
-                        <Link 
-                            href="/sign-in" 
+                        <button
+                            type="button"
+                            onClick={openWaitlist}
                             className="group flex items-center gap-2 text-black bg-primary hover:bg-primary-accent px-6 py-2.5 rounded-full font-semibold transition-all shadow-sm hover:shadow-md"
                         >
-                            <span>Sign in</span>
+                            <span>Join waitlist</span>
                             <HiOutlineArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                        </Link>
+                        </button>
 
                         {/* Country Flag Selector */}
                         <div className="relative">
@@ -553,14 +556,17 @@ const Header: React.FC = () => {
 
                             {/* Mobile CTA */}
                             <div className="pt-2">
-                                <Link 
-                                    href="/sign-in" 
+                                <button
+                                    type="button"
+                                    onClick={() => {
+                                        openWaitlist();
+                                        toggleMenu();
+                                    }}
                                     className="flex items-center justify-center gap-2 text-black bg-primary hover:bg-primary-accent px-6 py-3 rounded-full font-semibold transition-colors shadow-sm w-full" 
-                                    onClick={toggleMenu}
                                 >
-                                    <span>Sign in</span>
+                                    <span>Join waitlist</span>
                                     <HiOutlineArrowRight className="w-4 h-4" />
-                                </Link>
+                                </button>
                             </div>
                         </div>
                     </motion.div>
