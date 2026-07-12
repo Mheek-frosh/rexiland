@@ -591,18 +591,18 @@ const Header: React.FC = () => {
                         <motion.div
                             initial={{ opacity: 0, y: 28, scale: 0.94 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 16, scale: 0.96 }}
                             transition={{ type: 'spring', stiffness: 300, damping: 26 }}
-                            className="relative w-full max-w-lg overflow-hidden rounded-[2rem] bg-[#080d22] px-6 py-10 text-center text-white shadow-2xl sm:px-12 sm:py-12"
+                            className="relative w-full max-w-lg overflow-hidden rounded-[2rem] border border-zinc-100 bg-white px-6 py-10 text-center text-zinc-950 shadow-2xl shadow-secondary/20 sm:px-12 sm:py-12"
                         >
-                            <motion.div className="absolute -left-16 -top-20 h-52 w-52 rounded-full bg-secondary/60 blur-3xl" animate={{ x: [0, 24, 0], y: [0, 14, 0] }} transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }} />
+                            <motion.div className="absolute -left-16 -top-20 h-52 w-52 rounded-full bg-secondary/25 blur-3xl" animate={{ x: [0, 24, 0], y: [0, 14, 0] }} transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }} />
                             <motion.div className="absolute -bottom-24 -right-16 h-56 w-56 rounded-full bg-primary/35 blur-3xl" animate={{ x: [0, -20, 0], y: [0, -16, 0] }} transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }} />
-                            <motion.div initial={{ rotate: -15, scale: 0.7 }} animate={{ rotate: 0, scale: 1 }} transition={{ type: 'spring', delay: 0.12, stiffness: 220, damping: 15 }} className="relative mx-auto flex h-20 w-20 items-center justify-center rounded-[1.5rem] border border-white/15 bg-white/10 text-primary shadow-xl backdrop-blur">
+                            <motion.div initial={{ rotate: -15, scale: 0.7 }} animate={{ rotate: 0, scale: 1 }} transition={{ type: 'spring', delay: 0.12, stiffness: 220, damping: 15 }} className="relative mx-auto flex h-20 w-20 items-center justify-center rounded-[1.5rem] border border-secondary/15 bg-secondary/10 text-secondary shadow-xl shadow-secondary/10 backdrop-blur">
                                 <HiOutlineRocketLaunch className="h-10 w-10" />
                                 <motion.div className="absolute -right-3 -top-3 text-primary" animate={{ scale: [0.85, 1.2, 0.85], rotate: [0, 12, 0] }} transition={{ duration: 2, repeat: Infinity }}><HiOutlineSparkles className="h-6 w-6" /></motion.div>
                             </motion.div>
                             <p className="relative mt-7 text-xs font-bold uppercase tracking-[0.24em] text-primary">On the way</p>
                             <h2 id="business-coming-soon-title" className="relative mt-3 manrope text-3xl font-bold tracking-tight sm:text-4xl">Business is coming soon</h2>
-                            <p className="relative mx-auto mt-4 max-w-sm text-base leading-7 text-zinc-300">We&apos;re creating a powerful business experience for payments, operations, and growth. It&apos;ll be worth the wait.</p>
-                            <button type="button" onClick={() => setBusinessComingSoon(false)} className="relative mt-8 w-full rounded-full bg-primary px-6 py-3.5 font-bold text-zinc-950 transition hover:bg-primary-accent sm:w-auto sm:min-w-44">Got it</button>
+                            <p className="relative mx-auto mt-4 max-w-sm text-base leading-7 text-zinc-600">We&apos;re creating a powerful business experience for payments, operations, and growth. It&apos;ll be worth the wait.</p>
+                            <button type="button" onClick={() => setBusinessComingSoon(false)} className="relative mt-8 w-full rounded-full bg-secondary px-6 py-3.5 font-bold text-white transition hover:bg-secondary/90 sm:w-auto sm:min-w-44">Got it</button>
                         </motion.div>
                     </motion.div>
                 )}
