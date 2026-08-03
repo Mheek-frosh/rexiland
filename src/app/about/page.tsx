@@ -5,9 +5,9 @@ const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* HERO */}
-      <section className="relative pt-32 pb-16 md:pt-44 md:pb-20 overflow-hidden bg-gradient-to-b from-[#EDF5FD] via-[#F5FAFE] to-white">
+      <section className="relative pt-32 pb-16 md:pt-44 md:pb-20 overflow-hidden bg-gradient-to-b from-secondary/10 via-secondary/5 to-white">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute left-1/2 top-0 h-[600px] w-[1200px] -translate-x-1/2 bg-[radial-gradient(circle_at_50%_0%,rgba(47,79,255,0.18)_0%,transparent_60%)]" />
+          <div className="absolute left-1/2 top-0 h-[600px] w-[1200px] -translate-x-1/2 bg-[radial-gradient(circle_at_50%_0%,rgba(23,47,199,0.18)_0%,transparent_60%)]" />
         </div>
 
         <Container>

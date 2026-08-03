@@ -34,9 +34,9 @@ const AuthPage: React.FC = () => {
     };
 
     return (
-        <main className="relative min-h-screen overflow-hidden bg-[#EDF5FD]">
+        <main className="relative min-h-screen overflow-hidden bg-secondary/5">
             <div className="pointer-events-none absolute inset-0 -z-10">
-                <div className="absolute left-1/2 top-0 h-[720px] w-[1200px] -translate-x-1/2 bg-[radial-gradient(circle_at_50%_0%,rgba(48,79,255,0.18),transparent_58%)]" />
+                <div className="absolute left-1/2 top-0 h-[720px] w-[1200px] -translate-x-1/2 bg-[radial-gradient(circle_at_50%_0%,rgba(23,47,199,0.18),transparent_58%)]" />
                 <div className="absolute bottom-0 right-0 h-[520px] w-[720px] bg-[radial-gradient(circle_at_80%_100%,rgba(254,216,53,0.22),transparent_62%)]" />
             </div>
 
@@ -50,7 +50,7 @@ const AuthPage: React.FC = () => {
                     >
                         <div className="relative flex min-h-[720px] flex-col justify-between">
                             <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_55%,transparent_100%)]" />
-                            <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(48,79,255,0.42),transparent_32%),radial-gradient(circle_at_70%_72%,rgba(254,216,53,0.28),transparent_34%)]" />
+                            <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(23,47,199,0.42),transparent_32%),radial-gradient(circle_at_70%_72%,rgba(254,216,53,0.28),transparent_34%)]" />
 
                             <div>
                                 <div className="flex items-center gap-3">

@@ -136,7 +136,7 @@ const OfflinePayments: React.FC = () => {
                                 padding: "0.75rem 1.6rem",
                                 borderRadius: "0.5rem",
                                 borderLeft: "5px solid var(--primary)",
-                                boxShadow: "0 4px 18px rgba(48, 79, 255, 0.22)",
+                                boxShadow: "0 4px 18px rgba(23, 47, 199, 0.22)",
                                 cursor: "default",
                             }}
                         >
@@ -164,7 +164,7 @@ const OfflinePayments: React.FC = () => {
                         style={{
                             borderRadius: "1.75rem",
                             overflow: "hidden",
-                            boxShadow: "0 16px 48px rgba(48,79,255,0.13), 0 2px 8px rgba(0,0,0,0.08)",
+                            boxShadow: "0 16px 48px rgba(23,47,199,0.13), 0 2px 8px rgba(0,0,0,0.08)",
                             maxWidth: "480px",
                             width: "100%",
                             position: "relative",

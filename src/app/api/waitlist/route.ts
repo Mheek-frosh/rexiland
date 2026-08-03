@@ -30,7 +30,7 @@ export async function POST(request: Request) {
                 from,
                 to: [normalizedEmail],
                 subject: 'You’re on the RexiPay waitlist',
-                html: `<div style="font-family:Arial,sans-serif;color:#171717;line-height:1.6"><h1 style="color:#304fff">Welcome to the RexiPay waitlist</h1><p>Thanks for your interest in RexiPay. You’ve been added to our early-access list.</p><p>We’ll email you as soon as we’re ready to welcome you in.</p><p>— The RexiPay team</p></div>`,
+                html: `<div style="font-family:Arial,sans-serif;color:#171717;line-height:1.6"><h1 style="color:#172FC7">Welcome to the RexiPay waitlist</h1><p>Thanks for your interest in RexiPay. You’ve been added to our early-access list.</p><p>We’ll email you as soon as we’re ready to welcome you in.</p><p>— The RexiPay team</p></div>`,
             }),
         });
         if (!resendResponse.ok) throw new Error('Email provider rejected the request');

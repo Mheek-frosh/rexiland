@@ -126,7 +126,7 @@ const CryptoLiquidity: React.FC = () => {
                         <motion.div variants={childVariants} className="flex gap-4 items-start">
                             <div 
                                 style={{
-                                    background: "rgba(48, 79, 255, 0.1)",
+                                    background: "rgba(23, 47, 199, 0.1)",
                                     color: "var(--secondary)",
                                     padding: "0.6rem",
                                     borderRadius: "0.5rem",
@@ -150,7 +150,7 @@ const CryptoLiquidity: React.FC = () => {
                         <motion.div variants={childVariants} className="flex gap-4 items-start">
                             <div 
                                 style={{
-                                    background: "rgba(48, 79, 255, 0.1)",
+                                    background: "rgba(23, 47, 199, 0.1)",
                                     color: "var(--secondary)",
                                     padding: "0.6rem",
                                     borderRadius: "0.5rem",
@@ -174,7 +174,7 @@ const CryptoLiquidity: React.FC = () => {
                         <motion.div variants={childVariants} className="flex gap-4 items-start">
                             <div 
                                 style={{
-                                    background: "rgba(48, 79, 255, 0.1)",
+                                    background: "rgba(23, 47, 199, 0.1)",
                                     color: "var(--secondary)",
                                     padding: "0.6rem",
                                     borderRadius: "0.5rem",
@@ -206,7 +206,7 @@ const CryptoLiquidity: React.FC = () => {
                         style={{
                             borderRadius: "1.75rem",
                             overflow: "hidden",
-                            boxShadow: "0 16px 48px rgba(48,79,255,0.13), 0 2px 8px rgba(0,0,0,0.08)",
+                            boxShadow: "0 16px 48px rgba(23,47,199,0.13), 0 2px 8px rgba(0,0,0,0.08)",
                             maxWidth: "480px",
                             width: "100%",
                             position: "relative",

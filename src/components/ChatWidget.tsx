@@ -92,7 +92,7 @@ export default function ChatWidget({ className }: { className?: string }) {
             role="dialog"
             aria-modal="true"
           >
-            <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-100 bg-gradient-to-r from-[#EDF5FD] to-white">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-100 bg-gradient-to-r from-secondary/10 to-white">
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-2xl bg-secondary/15 text-secondary flex items-center justify-center border border-secondary/20">
                   <HiOutlineChatBubbleLeftRight className="w-5 h-5" />

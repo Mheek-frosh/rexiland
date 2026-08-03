@@ -15,7 +15,7 @@ const ContactPage: React.FC = () => {
         <div className="min-h-screen bg-white">
             
             {/* SECTION 1: Contact Hero & Main Channels */}
-            <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 overflow-hidden bg-gradient-to-b from-[#EDF5FD] via-[#F5FAFE] to-white">
+            <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 overflow-hidden bg-gradient-to-b from-secondary/10 via-secondary/5 to-white">
                 
                 {/* SVG Curve Grid Pattern Overlay */}
                 <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -64,7 +64,7 @@ const ContactPage: React.FC = () => {
                             className="group bg-white rounded-[2rem] p-8 md:p-10 border border-zinc-100 shadow-lg shadow-zinc-200/40 hover:shadow-xl hover:shadow-secondary/5 transition-all duration-300 flex flex-col justify-between"
                         >
                             <div>
-                                <div className="w-14 h-14 rounded-2xl bg-[#E8F1FF] text-secondary flex items-center justify-center mb-8 group-hover:scale-105 transition-transform duration-300">
+                                <div className="w-14 h-14 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center mb-8 group-hover:scale-105 transition-transform duration-300">
                                     <HiOutlinePhone className="w-7 h-7" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-zinc-900 mb-3">Engage Support</h3>
@@ -90,7 +90,7 @@ const ContactPage: React.FC = () => {
                             className="group bg-white rounded-[2rem] p-8 md:p-10 border border-zinc-100 shadow-lg shadow-zinc-200/40 hover:shadow-xl hover:shadow-secondary/5 transition-all duration-300 flex flex-col justify-between"
                         >
                             <div>
-                                <div className="w-14 h-14 rounded-2xl bg-[#E8F1FF] text-secondary flex items-center justify-center mb-8 group-hover:scale-105 transition-transform duration-300">
+                                <div className="w-14 h-14 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center mb-8 group-hover:scale-105 transition-transform duration-300">
                                     <HiOutlineQuestionMarkCircle className="w-7 h-7" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-zinc-900 mb-3">Find Answers</h3>
@@ -142,7 +142,7 @@ const ContactPage: React.FC = () => {
                                 {/* Tags */}
                                 <div className="flex flex-wrap gap-2 mb-8">
                                     {['Account', 'Sign In', 'Dashboard'].map(tag => (
-                                        <span key={tag} className="px-3 py-1 rounded-full text-xs font-semibold bg-[#EBF2FF] text-[#2F4FFF] border border-secondary/5">
+                                        <span key={tag} className="px-3 py-1 rounded-full text-xs font-semibold bg-secondary/10 text-secondary border border-secondary/5">
                                             {tag}
                                         </span>
                                     ))}
@@ -175,7 +175,7 @@ const ContactPage: React.FC = () => {
                                 {/* Tags */}
                                 <div className="flex flex-wrap gap-2 mb-8">
                                     {['Verification', 'Transactions', 'Security'].map(tag => (
-                                        <span key={tag} className="px-3 py-1 rounded-full text-xs font-semibold bg-[#EBF2FF] text-[#2F4FFF] border border-secondary/5">
+                                        <span key={tag} className="px-3 py-1 rounded-full text-xs font-semibold bg-secondary/10 text-secondary border border-secondary/5">
                                             {tag}
                                         </span>
                                     ))}
@@ -208,7 +208,7 @@ const ContactPage: React.FC = () => {
                                 {/* Tags */}
                                 <div className="flex flex-wrap gap-2 mb-8">
                                     {['Fraud', 'Security', 'Account'].map(tag => (
-                                        <span key={tag} className="px-3 py-1 rounded-full text-xs font-semibold bg-[#EBF2FF] text-[#2F4FFF] border border-secondary/5">
+                                        <span key={tag} className="px-3 py-1 rounded-full text-xs font-semibold bg-secondary/10 text-secondary border border-secondary/5">
                                             {tag}
                                         </span>
                                     ))}

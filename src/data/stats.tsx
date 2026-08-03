@@ -6,7 +6,7 @@ import { IStats } from "@/types";
 export const stats: IStats[] = [
     {
         title: "20M+",
-        icon: <BsBarChartFill size={34} className="text-blue-500" />,
+        icon: <BsBarChartFill size={34} className="text-secondary" />,
         description: "Transactions processed securely every day, providing real-time insights."
     },
     {
