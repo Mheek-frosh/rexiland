@@ -138,10 +138,14 @@ const Header: React.FC = () => {
                     {/* Left: Logo & Segment Toggle */}
                     <div className="flex items-center gap-6">
                         <Link href="/" className="flex items-center gap-2">
-                            <Image src="/favicon.ico" alt="Logo" width={28} height={28} className="min-w-fit w-7 h-7" />
-                            <span className="manrope text-xl font-bold text-foreground cursor-pointer tracking-tight">
-                                {siteDetails.siteName}
-                            </span>
+                            <Image
+                                src="/images/LIGHTLOGO1.svg"
+                                alt={`${siteDetails.siteName} logo`}
+                                width={2048}
+                                height={922}
+                                priority
+                                className="h-auto w-24 sm:w-28"
+                            />
                         </Link>
 
                         {/* Segment Toggle (Personal / Business) */}

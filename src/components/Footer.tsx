@@ -11,10 +11,13 @@ const Footer: React.FC = () => {
             <div className="max-w-7xl w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div>
                     <Link href="/" className="flex items-center gap-2">
-                        <Image src="/favicon.ico" alt="Logo" width={28} height={28} className="min-w-fit w-5 h-5 md:w-7 md:h-7" />
-                        <h3 className="manrope text-xl font-semibold cursor-pointer">
-                            {siteDetails.siteName}
-                        </h3>
+                        <Image
+                            src="/images/LIGHTLOGO1.svg"
+                            alt={`${siteDetails.siteName} logo`}
+                            width={2048}
+                            height={922}
+                            className="h-auto w-28 md:w-32"
+                        />
                     </Link>
                     <p className="mt-3.5 text-foreground-accent">
                         {footerDetails.subheading}
